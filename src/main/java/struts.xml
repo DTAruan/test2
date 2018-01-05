@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+   <package name="my" extends="struts-default">
+      <action name="LoginAction" class="org.westos.login.LoginAction">
+			<result>/suc.jsp</result>
+			<result name="error">/login.jsp</result>
+	  </action>
+      <action name="ajaxAction" class="org.westos.login.LoginAction" method="findUserName">
+			<result>/suc.jsp</result>
+			<result name="error">/login.jsp</result>
+	  </action>
+      <action name="registAction" class="org.westos.login.LoginAction" method="login">
+			<result>/success.jsp</result>
+			<result name="error">/regist.jsp</result>
+	  </action>
+   </package>
+</struts>
